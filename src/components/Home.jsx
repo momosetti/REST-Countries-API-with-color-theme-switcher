@@ -39,7 +39,7 @@ export default function Home() {
         <div className="cards">
           {" "}
           {filtredArr.map((el) => (
-            <Card data={el} />
+            <Card data={el} key={el.name} />
           ))}{" "}
         </div>
       </div>

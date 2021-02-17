@@ -1,15 +1,15 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 export default function Card({ data }) {
   return (
-    <a>
+    <Link to={data.name}>
       <div className="card">
         <div className="card-flag">
           <img src={data.flag} alt="" />
         </div>
         <div className="card-description">
           <h3 className="card-title">{data.name}</h3>
-          <ul>
+          <ul className="card-info">
             <li>
               <label>Population:</label> {data.population}{" "}
             </li>
@@ -23,6 +23,6 @@ export default function Card({ data }) {
           </ul>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }

@@ -29,7 +29,6 @@ body {
 }
 
 header {
-  background-color: var(--white-color);
   -webkit-box-shadow: 0px 2px 14px -5px rgba(107, 107, 107, 0.171);
   box-shadow: 0px 2px 14px -5px rgba(107, 107, 107, 0.171);
 }
@@ -46,15 +45,18 @@ header nav > div {
 }
 
 header h1 {
-  font-size: 1.1em;
+  font-size: 1.5em;
   margin: 0;
   color: inherit;
+  align-self: center;
 }
 
 header .darkmode {
   position: relative;
 }
-
+::placeholder {
+  color: inherit;
+}
 header .darkmode input {
   width: 100%;
   position: absolute;
@@ -88,6 +90,9 @@ header .darkmode label i {
   justify-content: space-between;
   border: none;
   background: transparent;
+  cursor: pointer;
+  padding: 0.5em;
+  color: inherit;
 }
 .darkmode button i {
   padding: 0 0.5em;
@@ -133,6 +138,7 @@ header .darkmode label i {
   background: url(../icon/arrow-down-s-line.svg) no-repeat 95% 50%;
   background-size: 10%;
   background-color: var(--white-color);
+  color: inherit;
 }
 
 .cards,
@@ -160,11 +166,13 @@ header .darkmode label i {
   border-radius: 7px 7px 0 0;
   height: 8em;
   object-fit: cover;
+  display: block;
 }
 
 .card .card-description {
   padding: 1em 1.9em;
   padding-bottom: 2em;
+  color: inherit;
 }
 
 .card .card-description h3 {
@@ -175,11 +183,14 @@ header .darkmode label i {
 .card .card-description ul {
   list-style: none;
 }
+.card .card-description ul li {
+  white-space: nowrap;
+}
 
 .btn {
   text-decoration: none;
-  color: var(--mode-text);
-  background-color: var(--white-color);
+  color: inherit;
+  background-color: inherit;
   border-radius: 3px;
   font-size: 1em;
   padding: 0.3em 1.4em;
@@ -337,5 +348,15 @@ header .darkmode label i {
     margin-top: 0;
     float: right;
   }
+}
+.dark-mode {
+  background-color: var(--dark-mode-background);
+  color: var(--white-color);
+}
+.dark-mode header,
+.dark-mode #search,
+.dark-mode #region,
+.dark-mode .card-description {
+  background-color: var(--dark-mode);
 }
 /*# sourceMappingURL=style.css.map */
