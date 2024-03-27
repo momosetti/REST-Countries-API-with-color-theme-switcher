@@ -11,7 +11,7 @@ export default function Home() {
     .filter((el) => el.region.toLowerCase().includes(filterQuery.toLowerCase()))
     .filter((el) => el.name.toLowerCase().includes(searchQuery.toLowerCase()));
   useEffect(() => {
-    fetch("https://restcountries.eu/rest/v2/all")
+    fetch("https://restcountries.com/v3.1/all")
       .then((res) => res.json())
       .then((data) => setCountries(data));
   }, []);
